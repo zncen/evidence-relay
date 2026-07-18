@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "Evidence Relay demo",
+    "created_at": "2026-07-18T06:10:00+00:00"
+  },
+  "claims": [
+    {
+      "id": "clm_1047a1b2",
+      "agent": "codex",
+      "task": "Ship conflict-safe CLI commands",
+      "files": ["relay.py", "tests/test_relay.py"],
+      "status": "active",
+      "created_at": "2026-07-18T06:18:00+00:00",
+      "released_at": null
+    },
+    {
+      "id": "clm_1047c3d4",
+      "agent": "claude",
+      "task": "Document the operator workflow",
+      "files": ["README.md"],
+      "status": "released",
+      "created_at": "2026-07-18T06:20:00+00:00",
+      "released_at": "2026-07-18T06:31:00+00:00"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "vrf_1047cb90",
+      "agent": "codex",
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "status": "passed",
+      "output": "test_claim_conflict_verify_and_handoff (test_relay.EvidenceRelayTests) ... ok\n\nRan 1 test in 0.12s\n\nOK",
+      "git_ref": "demo-commit",
+      "created_at": "2026-07-18T06:32:00+00:00"
+    }
+  ],
+  "handoffs": [
+    {
+      "id": "hnd_1047dd91",
+      "agent": "codex",
+      "title": "CLI ready for review",
+      "path": ".evidence-relay/handoffs/20260718-063300-cli-ready-for-review.md",
+      "created_at": "2026-07-18T06:33:00+00:00"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Evidence Relay local dashboard demo">
+    <title>Evidence Relay — proof before handoff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../tokens.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to workspace</a>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Evidence Relay home">
+        <span class="brand-mark" aria-hidden="true">ER</span>
+        <span>Evidence Relay</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#claims">Claims</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#handoff">Handoff</a>
+      </nav>
+      <button class="command-trigger" id="command-trigger" type="button" aria-haspopup="dialog">
+        <span aria-hidden="true">⌘</span> Command
+      </button>
+    </header>
+
+    <main id="workspace">
+      <section class="project-bar" aria-labelledby="project-title">
+        <div>
+          <p class="eyebrow">Local agent coordination</p>
+          <h1 id="project-title">Evidence Relay</h1>
+          <p id="project-meta">Loading a local ledger…</p>
+        </div>
+        <div class="project-actions">
+          <label class="button secondary" for="ledger-input">Open ledger</label>
+          <input id="ledger-input" type="file" accept="application/json">
+          <button class="button primary" id="load-demo" type="button">Load demo ledger</button>
+        </div>
+      </section>
+
+      <section class="metric-grid" aria-label="Relay summary">
+        <article class="metric-card">
+          <span>Active boundaries</span>
+          <strong id="active-count">—</strong>
+          <small>files protected from overlap</small>
+        </article>
+        <article class="metric-card">
+          <span>Verification</span>
+          <strong id="verification-state">—</strong>
+          <small id="verification-time">no evidence loaded</small>
+        </article>
+        <article class="metric-card">
+          <span>Handoffs</span>
+          <strong id="handoff-count">—</strong>
+          <small>portable, reviewable notes</small>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="panel claims-panel" id="claims">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">File boundaries</p>
+              <h2>Who owns what now</h2>
+            </div>
+            <button class="text-button" id="simulate-conflict" type="button">Simulate collision</button>
+          </div>
+          <div id="claims-list" class="claims-list" aria-live="polite"></div>
+        </article>
+
+        <aside class="panel relay-panel">
+          <p class="eyebrow">Relay protocol</p>
+          <ol>
+            <li><span>01</span>Claim exact files before editing.</li>
+            <li><span>02</span>Keep the command and exit code.</li>
+            <li><span>03</span>Export a handoff another agent can audit.</li>
+          </ol>
+          <a href="../README.md">Read the CLI guide <span aria-hidden="true">→</span></a>
+        </aside>
+      </section>
+
+      <section class="evidence-band" id="evidence" aria-labelledby="evidence-title">
+        <div class="evidence-intro">
+          <p class="eyebrow">Verification trail</p>
+          <h2 id="evidence-title">Proof travels with the work.</h2>
+          <p>Commands, outputs, commit references, and timestamps stay attached to a decision instead of disappearing into chat history.</p>
+        </div>
+        <div id="verification-card" class="verification-card" aria-live="polite"></div>
+      </section>
+
+      <section class="panel handoff-panel" id="handoff" aria-labelledby="handoff-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Portable context</p>
+            <h2 id="handoff-title">Handoff queue</h2>
+          </div>
+          <button class="button secondary" id="export-handoff" type="button">Export latest handoff</button>
+        </div>
+        <div id="handoff-list" class="handoff-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Evidence Relay</span>
+      <span>Local-first coordination for coding agents.</span>
+      <a href="https://github.com/" id="repo-link">View source</a>
+    </footer>
+
+    <dialog id="command-dialog" aria-labelledby="command-title">
+      <form method="dialog" class="command-shell">
+        <div class="command-head">
+          <h2 id="command-title">Command palette</h2>
+          <button class="icon-button" type="submit" aria-label="Close command palette">×</button>
+        </div>
+        <input id="command-search" type="search" autocomplete="off" placeholder="Search actions…" aria-label="Search commands">
+        <div id="command-options" class="command-options" role="listbox"></div>
+        <p class="command-hint"><kbd>↑↓</kbd> select <kbd>Enter</kbd> run <kbd>Esc</kbd> close</p>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

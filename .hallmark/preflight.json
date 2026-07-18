@@ -1,0 +1,14 @@
+{
+  "genre": "modern-minimal",
+  "macrostructure": "workbench",
+  "theme": "cobalt",
+  "color_mode": "dark",
+  "typography": {
+    "display": "Space Grotesk",
+    "body": "Inter",
+    "mono": "JetBrains Mono"
+  },
+  "modules": ["Nav (N9)", "Footer (Ft2)"],
+  "enrichment": "none",
+  "rationale": "A focused developer workbench makes ownership, proof, and handoff evidence legible without inventing operational claims."
+}
