@@ -1,3 +1,5 @@
+> 2026-10-22 更新：以下保留原始競賽展示構想；新版本 verify/handoff 需要 --claim-id。可靠性展示請執行 `python3 demo/reliability_demo.py`，步驟與限制見 README.md。
+
 # Evidence Relay — 2 minute 20 second demo script
 
 ## 0:00–0:18 — Problem

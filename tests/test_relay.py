@@ -50,19 +50,23 @@ class EvidenceRelayTests(unittest.TestCase):
             self.assertEqual(conflicting.returncode, 2)
             self.assertIn("blocked", conflicting.stdout)
 
+            claim_id = json.loads(claimed.stdout)["claim"]["id"]
             verified = self.run_relay(
                 root,
                 "verify",
+                "--claim-id", claim_id,
                 "--agent",
                 "codex",
                 "--command",
                 f'{sys.executable} -c "print(42)"',
+                "--require-output", "42",
             )
             self.assertEqual(verified.returncode, 0, verified.stderr)
 
             handoff = self.run_relay(
                 root,
                 "handoff",
+                "--claim-id", claim_id,
                 "--agent",
                 "codex",
                 "--title",

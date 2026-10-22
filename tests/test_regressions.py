@@ -38,3 +38,20 @@ class RegressionTests(unittest.TestCase):
             before = relay.snapshot(root)
             (root / 'new').write_text('two')
             self.assertNotEqual(before, relay.snapshot(root))
+
+    def test_snapshot_tracks_modes_deletion_and_symlink_without_following(self):
+        with tempfile.TemporaryDirectory() as d, tempfile.TemporaryDirectory() as outside:
+            root = Path(d)
+            external = Path(outside) / 'external'
+            external.write_text('external fixture')
+            (root / 'link').symlink_to(external)
+            first = relay.snapshot(root)
+            external.write_text('external changed')
+            self.assertEqual(first, relay.snapshot(root))  # Explicit external-dependency limit.
+            (root / 'link').unlink()
+            self.assertNotEqual(first, relay.snapshot(root))
+            file = root / 'local'
+            file.write_text('fixture')
+            first = relay.snapshot(root)
+            file.chmod(0o700)
+            self.assertNotEqual(first, relay.snapshot(root))

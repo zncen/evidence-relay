@@ -1,0 +1,105 @@
+Initialized Evidence Relay ledger at /tmp/relay-demo-r1qzhoxm/.evidence-relay/ledger.json
+
+{
+  "status": "claimed",
+  "claim": {
+    "id": "clm_d759b23d797645fe8b2bc8be2cb285f2",
+    "agent": "demo",
+    "task": "answer correctness",
+    "files": [
+      "answer.py"
+    ],
+    "status": "active",
+    "created_at": "2026-10-22T09:58:19+00:00",
+    "released_at": null
+  }
+}
+
+{
+  "id": "vrf_5e2a1ee6f9de4138a88b5ac21650145a",
+  "agent": "demo",
+  "claim_id": "clm_d759b23d797645fe8b2bc8be2cb285f2",
+  "task": "answer correctness",
+  "files": [
+    "answer.py"
+  ],
+  "command": "/usr/bin/python3 -c 'from answer import answer; assert answer == 42; print(\"ASSERTION_OK\")'",
+  "exit_code": 0,
+  "status": "passed",
+  "require_output": "ASSERTION_OK",
+  "output": "ASSERTION_OK\n",
+  "output_truncated": false,
+  "timed_out": false,
+  "snapshot_before": "80b49f35f0716d2272966fcc0aa80de590a7f44af18af78fab089e0ea08a56b6",
+  "snapshot_after": "80b49f35f0716d2272966fcc0aa80de590a7f44af18af78fab089e0ea08a56b6",
+  "stable": true,
+  "git_ref": null,
+  "created_at": "2026-10-22T09:58:19+00:00"
+}
+
+=== 未改檔：current / passed ===
+{
+  "id": "hnd_eb9a253f773e4e5aa37a8024f4dc6515",
+  "agent": "demo",
+  "title": "Answer review",
+  "claim_id": "clm_d759b23d797645fe8b2bc8be2cb285f2",
+  "evidence": [
+    {
+      "id": "vrf_5e2a1ee6f9de4138a88b5ac21650145a",
+      "validity": "current",
+      "status": "passed"
+    }
+  ],
+  "path": ".evidence-relay/handoffs/20261022-095819-hnd_eb9a253f773e4e5aa37a8024f4dc6515-answer-review.md",
+  "created_at": "2026-10-22T09:58:19+00:00"
+}
+
+# Answer review
+
+- Handoff ID: hnd_eb9a253f773e4e5aa37a8024f4dc6515
+- Prepared by: demo
+- Created: 2026-10-22T09:58:19+00:00
+- Git ref: uncommitted
+
+## Active file boundaries
+- demo: answer.py
+
+## Latest verification evidence
+- current / passed: /usr/bin/python3 -c 'from answer import answer; assert answer == 42; print("ASSERTION_OK")' (exit 0, 2026-10-22T09:58:19+00:00)
+
+## Next operator
+- Review active boundaries before changing files.
+
+=== 改檔後：stale / passed（歷史退出成功，已過期）===
+{
+  "id": "hnd_e5567c61d71543d5812f3f780489e283",
+  "agent": "demo",
+  "title": "Answer review",
+  "claim_id": "clm_d759b23d797645fe8b2bc8be2cb285f2",
+  "evidence": [
+    {
+      "id": "vrf_5e2a1ee6f9de4138a88b5ac21650145a",
+      "validity": "stale",
+      "status": "passed"
+    }
+  ],
+  "path": ".evidence-relay/handoffs/20261022-095819-hnd_e5567c61d71543d5812f3f780489e283-answer-review.md",
+  "created_at": "2026-10-22T09:58:19+00:00"
+}
+
+# Answer review
+
+- Handoff ID: hnd_e5567c61d71543d5812f3f780489e283
+- Prepared by: demo
+- Created: 2026-10-22T09:58:19+00:00
+- Git ref: uncommitted
+
+## Active file boundaries
+- demo: answer.py
+
+## Latest verification evidence
+- stale / passed: /usr/bin/python3 -c 'from answer import answer; assert answer == 42; print("ASSERTION_OK")' (exit 0, 2026-10-22T09:58:19+00:00)
+
+## Next operator
+- Review active boundaries before changing files.
+
