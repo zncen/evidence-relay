@@ -1,0 +1,44 @@
+test_dotenv_is_preserved (test_regressions.RegressionTests.test_dotenv_is_preserved) ... FAIL
+test_snapshot_includes_untracked (test_regressions.RegressionTests.test_snapshot_includes_untracked) ... ERROR
+test_stale_evidence_and_command_only (test_regressions.RegressionTests.test_stale_evidence_and_command_only) ... FAIL
+test_claim_conflict_verify_and_handoff (test_relay.EvidenceRelayTests.test_claim_conflict_verify_and_handoff) ... ok
+
+======================================================================
+ERROR: test_snapshot_includes_untracked (test_regressions.RegressionTests.test_snapshot_includes_untracked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zncen/Documents/Codex/2026-10-22/task-2/evidence-relay/tests/test_regressions.py", line 38, in test_snapshot_includes_untracked
+    before = relay.snapshot(root)
+             ^^^^^^^^^^^^^^
+AttributeError: module 'relay' has no attribute 'snapshot'
+
+======================================================================
+FAIL: test_dotenv_is_preserved (test_regressions.RegressionTests.test_dotenv_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zncen/Documents/Codex/2026-10-22/task-2/evidence-relay/tests/test_regressions.py", line 16, in test_dotenv_is_preserved
+    self.assertEqual(relay.normalize_file('./.env'), '.env')
+AssertionError: 'env' != '.env'
+- env
++ .env
+? +
+
+
+======================================================================
+FAIL: test_stale_evidence_and_command_only (test_regressions.RegressionTests.test_stale_evidence_and_command_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zncen/Documents/Codex/2026-10-22/task-2/evidence-relay/tests/test_regressions.py", line 28, in test_stale_evidence_and_command_only
+    v = json.loads(run('verify', '--agent', 'a', '--claim-id', c['id'], '--command', 'true'))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zncen/Documents/Codex/2026-10-22/task-2/evidence-relay/tests/test_regressions.py", line 23, in run
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 2 != 0 : usage: relay.py [-h] [--root ROOT]
+                {init,claim,release,verify,handoff,status} ...
+relay.py: error: unrecognized arguments: --claim-id clm_4924554761
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.742s
+
+FAILED (failures=2, errors=1)
