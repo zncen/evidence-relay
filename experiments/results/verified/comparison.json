@@ -1,0 +1,3206 @@
+{
+  "environment": {
+    "recorded_at_utc": "2026-10-22T09:58:26.375128+00:00",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "cpu_count": 12,
+    "baseline_commit": "00b72031d10cafab4ee7f0478e9246fc99bcf011",
+    "checkout_commit": "84b95f37fdd589f796e5f6961c8001892d292431",
+    "baseline_sha256": "7f314dba4608be30081cf1f536f7c20b3e79400644bd1feeca8965c768cc87fe",
+    "improved_sha256": "99afb34d6ef6be230c376dd898d9664d7aeb29c13542c728d8828f6c42ad9005",
+    "command": "/usr/bin/python3 experiments/run.py --repeats 3",
+    "harness_sha256": {
+      "run.py": "68bb4fb699958fc442a8de07e6272bb483bc2864befe9aae77b5413b6e1f1334",
+      "worker.py": "60f416feb74e61b6ec35d11229e93de7d4343acc11e75242bbb048319e5ecdca"
+    },
+    "race_delay_seconds": 0.04,
+    "repeats": 3
+  },
+  "stale": [
+    {
+      "version": "baseline",
+      "scenario": "unchanged",
+      "expected_stale": false,
+      "accepted": true,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_5826574667\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:26+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_5826638873",
+        "agent": "a",
+        "title": "review",
+        "path": ".evidence-relay/handoffs/20261022-095826-review.md",
+        "created_at": "2026-10-22T09:58:26+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_5826638873\n- Prepared by: a\n- Created: 2026-10-22T09:58:26+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:26+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "baseline",
+      "scenario": "tracked-edit",
+      "expected_stale": true,
+      "accepted": true,
+      "false_negative": true,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_5826844851\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": \"95e0108094ccc1d4ad81e9cd6482d436f69ffffb\",\n  \"created_at\": \"2026-10-22T09:58:26+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_5826907928",
+        "agent": "a",
+        "title": "review",
+        "path": ".evidence-relay/handoffs/20261022-095826-review.md",
+        "created_at": "2026-10-22T09:58:26+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_5826907928\n- Prepared by: a\n- Created: 2026-10-22T09:58:26+00:00\n- Git ref: 95e0108094ccc1d4ad81e9cd6482d436f69ffffb\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:26+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "baseline",
+      "scenario": "untracked-edit",
+      "expected_stale": true,
+      "accepted": true,
+      "false_negative": true,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_5827105127\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:27+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_5827166629",
+        "agent": "a",
+        "title": "review",
+        "path": ".evidence-relay/handoffs/20261022-095827-review.md",
+        "created_at": "2026-10-22T09:58:27+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_5827166629\n- Prepared by: a\n- Created: 2026-10-22T09:58:27+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:27+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "baseline",
+      "scenario": "dotenv-edit",
+      "expected_stale": true,
+      "accepted": true,
+      "false_negative": true,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_5827374183\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:27+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_5827435991",
+        "agent": "a",
+        "title": "review",
+        "path": ".evidence-relay/handoffs/20261022-095827-review.md",
+        "created_at": "2026-10-22T09:58:27+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_5827435991\n- Prepared by: a\n- Created: 2026-10-22T09:58:27+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: env\n\n## Latest verification evidence\n- passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:27+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "baseline",
+      "scenario": "during-command",
+      "expected_stale": true,
+      "accepted": true,
+      "false_negative": true,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_5827652845\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\"); from pathlib import Path; Path(\\\"a\\\").write_text(\\\"after\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:27+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_5827716648",
+        "agent": "a",
+        "title": "review",
+        "path": ".evidence-relay/handoffs/20261022-095827-review.md",
+        "created_at": "2026-10-22T09:58:27+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_5827716648\n- Prepared by: a\n- Created: 2026-10-22T09:58:27+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- passed: /usr/bin/python3 -c 'print(\"ACCEPTED\"); from pathlib import Path; Path(\"a\").write_text(\"after\")' (exit 0, 2026-10-22T09:58:27+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "baseline",
+      "scenario": "other-task",
+      "expected_stale": true,
+      "accepted": true,
+      "false_negative": true,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_5827913786\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:27+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_5828030764",
+        "agent": "a",
+        "title": "review",
+        "path": ".evidence-relay/handoffs/20261022-095828-review.md",
+        "created_at": "2026-10-22T09:58:28+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_5828030764\n- Prepared by: a\n- Created: 2026-10-22T09:58:28+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n- a: b\n\n## Latest verification evidence\n- passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:27+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "improved",
+      "scenario": "unchanged",
+      "expected_stale": false,
+      "accepted": true,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_b0991d8ccffe4019a3c744cf41719603\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_d0c342c21e5b43f591a5fa5c8d3303df\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \"a\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"snapshot_after\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"stable\": true,\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:33+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_4d4f99f32a74445e9c9eab1753569e87",
+        "agent": "a",
+        "title": "review",
+        "claim_id": "clm_d0c342c21e5b43f591a5fa5c8d3303df",
+        "evidence": [
+          {
+            "id": "vrf_b0991d8ccffe4019a3c744cf41719603",
+            "validity": "current",
+            "status": "passed"
+          }
+        ],
+        "path": ".evidence-relay/handoffs/20261022-095833-hnd_4d4f99f32a74445e9c9eab1753569e87-review.md",
+        "created_at": "2026-10-22T09:58:33+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_4d4f99f32a74445e9c9eab1753569e87\n- Prepared by: a\n- Created: 2026-10-22T09:58:33+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- current / passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:33+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "improved",
+      "scenario": "tracked-edit",
+      "expected_stale": true,
+      "accepted": false,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_93cd84452c2d4839b7ff98bb0969cf76\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_238170eba2b04b93a301e3f6e8c1c725\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \"a\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"snapshot_after\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"stable\": true,\n  \"git_ref\": \"1335b98908ab9c18f506b08dcc8be3ebbdc78e02\",\n  \"created_at\": \"2026-10-22T09:58:33+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_49c4148356c0458f94f5fe329a30f3a3",
+        "agent": "a",
+        "title": "review",
+        "claim_id": "clm_238170eba2b04b93a301e3f6e8c1c725",
+        "evidence": [
+          {
+            "id": "vrf_93cd84452c2d4839b7ff98bb0969cf76",
+            "validity": "stale",
+            "status": "passed"
+          }
+        ],
+        "path": ".evidence-relay/handoffs/20261022-095833-hnd_49c4148356c0458f94f5fe329a30f3a3-review.md",
+        "created_at": "2026-10-22T09:58:33+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_49c4148356c0458f94f5fe329a30f3a3\n- Prepared by: a\n- Created: 2026-10-22T09:58:33+00:00\n- Git ref: 1335b98908ab9c18f506b08dcc8be3ebbdc78e02\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- stale / passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:33+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "improved",
+      "scenario": "untracked-edit",
+      "expected_stale": true,
+      "accepted": false,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_3bd3cb0c3e8145538c94166cdafe3e05\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_1e331ebdcf6e41efb244817974d0ea2d\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \"a\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"snapshot_after\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"stable\": true,\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:33+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_e775a8c9d18141728189008dcea8aa50",
+        "agent": "a",
+        "title": "review",
+        "claim_id": "clm_1e331ebdcf6e41efb244817974d0ea2d",
+        "evidence": [
+          {
+            "id": "vrf_3bd3cb0c3e8145538c94166cdafe3e05",
+            "validity": "stale",
+            "status": "passed"
+          }
+        ],
+        "path": ".evidence-relay/handoffs/20261022-095833-hnd_e775a8c9d18141728189008dcea8aa50-review.md",
+        "created_at": "2026-10-22T09:58:33+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_e775a8c9d18141728189008dcea8aa50\n- Prepared by: a\n- Created: 2026-10-22T09:58:33+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- stale / passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:33+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "improved",
+      "scenario": "dotenv-edit",
+      "expected_stale": true,
+      "accepted": false,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_f1a9cc195dfa43ca8962e17c29cfc2f0\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_2d64cc2a9b8b4bce910752c79e20acf6\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \".env\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"691781d3fa178370eef5258e3c76a7a57e995dba24219d788c47bf6ae386e7c0\",\n  \"snapshot_after\": \"691781d3fa178370eef5258e3c76a7a57e995dba24219d788c47bf6ae386e7c0\",\n  \"stable\": true,\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:34+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_f53932550086423abbd1e9a9706b7b32",
+        "agent": "a",
+        "title": "review",
+        "claim_id": "clm_2d64cc2a9b8b4bce910752c79e20acf6",
+        "evidence": [
+          {
+            "id": "vrf_f1a9cc195dfa43ca8962e17c29cfc2f0",
+            "validity": "stale",
+            "status": "passed"
+          }
+        ],
+        "path": ".evidence-relay/handoffs/20261022-095834-hnd_f53932550086423abbd1e9a9706b7b32-review.md",
+        "created_at": "2026-10-22T09:58:34+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_f53932550086423abbd1e9a9706b7b32\n- Prepared by: a\n- Created: 2026-10-22T09:58:34+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: .env\n\n## Latest verification evidence\n- stale / passed: /usr/bin/python3 -c 'print(\"ACCEPTED\")' (exit 0, 2026-10-22T09:58:34+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "improved",
+      "scenario": "during-command",
+      "expected_stale": true,
+      "accepted": false,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 1,
+        "stdout": "{\n  \"id\": \"vrf_c6a0399ce80041dfb69b6fce052d88a1\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_e68665c73c014fedb913115e9f496f1b\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \"a\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\"); from pathlib import Path; Path(\\\"a\\\").write_text(\\\"after\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"snapshot_after\": \"87e402d2b11928c4e352bda014c7badfeec79ebfcdf5adb3beda4ca1a4ef8170\",\n  \"stable\": false,\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:34+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_b69e8336ddd543d29ebe629845e8c9a3",
+        "agent": "a",
+        "title": "review",
+        "claim_id": "clm_e68665c73c014fedb913115e9f496f1b",
+        "evidence": [
+          {
+            "id": "vrf_c6a0399ce80041dfb69b6fce052d88a1",
+            "validity": "stale",
+            "status": "passed"
+          }
+        ],
+        "path": ".evidence-relay/handoffs/20261022-095834-hnd_b69e8336ddd543d29ebe629845e8c9a3-review.md",
+        "created_at": "2026-10-22T09:58:34+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_b69e8336ddd543d29ebe629845e8c9a3\n- Prepared by: a\n- Created: 2026-10-22T09:58:34+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: a\n\n## Latest verification evidence\n- stale / passed: /usr/bin/python3 -c 'print(\"ACCEPTED\"); from pathlib import Path; Path(\"a\").write_text(\"after\")' (exit 0, 2026-10-22T09:58:34+00:00)\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    },
+    {
+      "version": "improved",
+      "scenario": "other-task",
+      "expected_stale": true,
+      "accepted": false,
+      "false_negative": false,
+      "false_positive": false,
+      "verification": {
+        "exit_code": 0,
+        "stdout": "{\n  \"id\": \"vrf_c6e5499199f8491b94963aaf85ee9398\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_5a026907620f438a9b220255d4f02bf5\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \"a\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'print(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"snapshot_after\": \"e9dd496d9d7d799294b8eac9d730083fc67af4f021cd96e84320227747724b57\",\n  \"stable\": true,\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:34+00:00\"\n}\n",
+        "stderr": ""
+      },
+      "handoff": {
+        "id": "hnd_71a5b46759874b4789ddccbb3d654ea2",
+        "agent": "a",
+        "title": "review",
+        "claim_id": "clm_63066ef0daea4c9798b3ebd5d46b83e7",
+        "evidence": [],
+        "path": ".evidence-relay/handoffs/20261022-095834-hnd_71a5b46759874b4789ddccbb3d654ea2-review.md",
+        "created_at": "2026-10-22T09:58:34+00:00"
+      },
+      "note": "# review\n\n- Handoff ID: hnd_71a5b46759874b4789ddccbb3d654ea2\n- Prepared by: a\n- Created: 2026-10-22T09:58:34+00:00\n- Git ref: uncommitted\n\n## Active file boundaries\n- a: b\n\n## Latest verification evidence\n- No verification recorded yet.\n\n## Next operator\n- Review active boundaries before changing files.\n"
+    }
+  ],
+  "races": [
+    {
+      "version": "baseline",
+      "processes": 2,
+      "same_file": false,
+      "repeat": 0,
+      "seconds": 0.12964458303758875,
+      "successful": 2,
+      "double_claims": 0,
+      "lost_acknowledged_events": 1,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828229698\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828229086\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:28+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5828229698",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:28+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 2,
+      "same_file": false,
+      "repeat": 1,
+      "seconds": 0.13267309899674729,
+      "successful": 2,
+      "double_claims": 0,
+      "lost_acknowledged_events": 1,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828427367\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828424361\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:28+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5828427367",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:28+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 2,
+      "same_file": false,
+      "repeat": 2,
+      "seconds": 0.11916978901717812,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 1,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-2-False-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-2-False-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828603376\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:28+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5828603462",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:28+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 2,
+      "same_file": true,
+      "repeat": 0,
+      "seconds": 0.12109011301072314,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-2-True-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-2-True-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828788992\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:28+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5828788992",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:28+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 2,
+      "same_file": true,
+      "repeat": 1,
+      "seconds": 0.1235373510280624,
+      "successful": 2,
+      "double_claims": 1,
+      "lost_acknowledged_events": 1,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828975594\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5828978221\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:28+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:28+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5828978221",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:28+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 2,
+      "same_file": true,
+      "repeat": 2,
+      "seconds": 0.11650734499562532,
+      "successful": 2,
+      "double_claims": 1,
+      "lost_acknowledged_events": 1,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829164249\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829165735\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:29+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5829165735",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:29+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 4,
+      "same_file": false,
+      "repeat": 0,
+      "seconds": 0.14708022499689832,
+      "successful": 3,
+      "double_claims": 0,
+      "lost_acknowledged_events": 2,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-False-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-False-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829367061\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829367679\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829370612\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:29+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5829370612",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:29+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 4,
+      "same_file": false,
+      "repeat": 1,
+      "seconds": 0.14881628099828959,
+      "successful": 3,
+      "double_claims": 0,
+      "lost_acknowledged_events": 2,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829575869\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829578280\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-False-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-False-1/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829578896\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:29+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5829578896",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:29+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 4,
+      "same_file": false,
+      "repeat": 2,
+      "seconds": 0.15563255798770115,
+      "successful": 4,
+      "double_claims": 0,
+      "lost_acknowledged_events": 3,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829797753\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829799952\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829801028\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5829797058\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:29+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:29+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5829801028",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:29+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 4,
+      "same_file": true,
+      "repeat": 0,
+      "seconds": 0.14621756999986246,
+      "successful": 3,
+      "double_claims": 2,
+      "lost_acknowledged_events": 2,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830014279\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830015116\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-True-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-True-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830012455\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:29+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5830015116",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:30+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 4,
+      "same_file": true,
+      "repeat": 1,
+      "seconds": 0.14787110802717507,
+      "successful": 3,
+      "double_claims": 2,
+      "lost_acknowledged_events": 2,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830228510\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830229335\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830225958\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-True-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-True-1/.evidence-relay/ledger.json'\n"
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:30+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5830229335",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:30+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 4,
+      "same_file": true,
+      "repeat": 2,
+      "seconds": 0.15522036800393835,
+      "successful": 3,
+      "double_claims": 2,
+      "lost_acknowledged_events": 2,
+      "unexpected_errors": 1,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830446940\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830444707\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-True-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-4-True-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830448221\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:30+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5830448221",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:30+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 8,
+      "same_file": false,
+      "repeat": 0,
+      "seconds": 0.18705995101481676,
+      "successful": 5,
+      "double_claims": 0,
+      "lost_acknowledged_events": 4,
+      "unexpected_errors": 3,
+      "raw": [
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830687278\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830688455\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830687853\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-4\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830682568\",\n    \"agent\": \"worker-6\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-6\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830686710\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-7\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:30+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5830688455",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:30+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 8,
+      "same_file": false,
+      "repeat": 1,
+      "seconds": 0.19040543801384047,
+      "successful": 5,
+      "double_claims": 0,
+      "lost_acknowledged_events": 4,
+      "unexpected_errors": 3,
+      "raw": [
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-1/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-1/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830943022\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830942759\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830939552\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-4\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-1/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830942167\",\n    \"agent\": \"worker-6\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-6\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5830938399\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-7\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:30+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:30+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5830943022",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:30+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 8,
+      "same_file": false,
+      "repeat": 2,
+      "seconds": 0.19542008399730548,
+      "successful": 4,
+      "double_claims": 0,
+      "lost_acknowledged_events": 3,
+      "unexpected_errors": 4,
+      "raw": [
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831207830\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831209242\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-4\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-False-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831211995\",\n    \"agent\": \"worker-6\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-6\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831204895\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-7\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:31+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5831211995",
+            "agent": "worker-6",
+            "task": "race",
+            "files": [
+              "file-6"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:31+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 8,
+      "same_file": true,
+      "repeat": 0,
+      "seconds": 0.20017713296692818,
+      "successful": 4,
+      "double_claims": 3,
+      "lost_acknowledged_events": 4,
+      "unexpected_errors": 4,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831471017\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831470572\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831471360\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831468099\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-0/.evidence-relay/ledger.json'\n"
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:31+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5831471787",
+            "agent": "worker-6",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:31+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 8,
+      "same_file": true,
+      "repeat": 1,
+      "seconds": 0.1969747290131636,
+      "successful": 6,
+      "double_claims": 5,
+      "lost_acknowledged_events": 6,
+      "unexpected_errors": 2,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831740274\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-1/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831737930\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831738537\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831734780\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831738299\",\n    \"agent\": \"worker-5\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-1/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-1/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831739681\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:31+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5831740590",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:31+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "baseline",
+      "processes": 8,
+      "same_file": true,
+      "repeat": 2,
+      "seconds": 0.1911435590009205,
+      "successful": 6,
+      "double_claims": 5,
+      "lost_acknowledged_events": 5,
+      "unexpected_errors": 2,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831994126\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831994700\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831993067\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831992171\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831989769\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5831988974\",\n    \"agent\": \"worker-5\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:31+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-2/.evidence-relay/ledger.json'\n"
+        },
+        {
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "[Errno 2] No such file or directory: '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-2/.evidence-relay/ledger.tmp' -> '/tmp/evidence-relay-experiment-j84w7zhf/baseline/race-8-True-2/.evidence-relay/ledger.json'\n"
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:31+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5831994700",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:31+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 2,
+      "same_file": false,
+      "repeat": 0,
+      "seconds": 0.18207564699696377,
+      "successful": 2,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_22edcaad2174409c9fb970f56401221c\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_4452efef38774e639636d14508cc172e\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:35+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_4452efef38774e639636d14508cc172e",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_22edcaad2174409c9fb970f56401221c",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 2,
+      "same_file": false,
+      "repeat": 1,
+      "seconds": 0.18012304499279708,
+      "successful": 2,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_d81ac4c5e57647938c089c2de972605b\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_d9fd863198a14b1dba64a0de85608146\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:35+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_d81ac4c5e57647938c089c2de972605b",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_d9fd863198a14b1dba64a0de85608146",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 2,
+      "same_file": false,
+      "repeat": 2,
+      "seconds": 0.18720926099922508,
+      "successful": 2,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_de3d38fcbf1f43ccbcb51fc5ca518ebd\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_ee154b4081d844bba4d022252a439b30\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:35+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_de3d38fcbf1f43ccbcb51fc5ca518ebd",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_ee154b4081d844bba4d022252a439b30",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 2,
+      "same_file": true,
+      "repeat": 0,
+      "seconds": 0.17163728398736566,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_85dc4efb5ec549b3bd290a634b2d4971\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:35+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_85dc4efb5ec549b3bd290a634b2d4971\",\n      \"agent\": \"worker-0\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:35+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_85dc4efb5ec549b3bd290a634b2d4971",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:35+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 2,
+      "same_file": true,
+      "repeat": 1,
+      "seconds": 0.17929669801378623,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_76cb9cceb6af400bab12c947eac8aea7\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:36+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_76cb9cceb6af400bab12c947eac8aea7\",\n      \"agent\": \"worker-0\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:36+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_76cb9cceb6af400bab12c947eac8aea7",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:36+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 2,
+      "same_file": true,
+      "repeat": 2,
+      "seconds": 0.1840031369938515,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_ba0f96d11d6b41d88a0cb3039564e6c9\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:36+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_ba0f96d11d6b41d88a0cb3039564e6c9\",\n      \"agent\": \"worker-0\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:36+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_ba0f96d11d6b41d88a0cb3039564e6c9",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:36+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 4,
+      "same_file": false,
+      "repeat": 0,
+      "seconds": 0.3008589220116846,
+      "successful": 4,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_51bce47b1063474f9fa13c82ee51641e\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:36+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_cbd5295eea444d40be72690cb83b5be0\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:36+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_6363937e355d44779c8fcee4ba3de2bb\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:36+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_27f9d1d17cf1459b8695117007a82b8b\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:36+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:36+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_51bce47b1063474f9fa13c82ee51641e",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:36+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_27f9d1d17cf1459b8695117007a82b8b",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:36+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_cbd5295eea444d40be72690cb83b5be0",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:36+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_6363937e355d44779c8fcee4ba3de2bb",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:36+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 4,
+      "same_file": false,
+      "repeat": 1,
+      "seconds": 0.31643379596062005,
+      "successful": 4,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_8a349c6518974b18b3d8f26b9aabea18\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5bf403762e424bcd85dda6e71d94a315\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_cc27b2e5439541d7b75fea98c934912f\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_8f52b2360929491981f9c6aa88e4f7b2\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:36+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_8a349c6518974b18b3d8f26b9aabea18",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_8f52b2360929491981f9c6aa88e4f7b2",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_5bf403762e424bcd85dda6e71d94a315",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_cc27b2e5439541d7b75fea98c934912f",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 4,
+      "same_file": false,
+      "repeat": 2,
+      "seconds": 0.31350064399885014,
+      "successful": 4,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_ec41ccde5611415789996a3d17baae41\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_e6786599a0e14babbab2c642a417b2c1\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_3fef0576c65444e181c6c8d6240de187\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_99b13fc0758b4bc7932c9732e94b0d97\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:37+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_99b13fc0758b4bc7932c9732e94b0d97",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_e6786599a0e14babbab2c642a417b2c1",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_3fef0576c65444e181c6c8d6240de187",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_ec41ccde5611415789996a3d17baae41",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 4,
+      "same_file": true,
+      "repeat": 0,
+      "seconds": 0.29104707995429635,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_cda9010d25a4424cb5a21ad15764c696\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:37+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_cda9010d25a4424cb5a21ad15764c696\",\n      \"agent\": \"worker-0\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_cda9010d25a4424cb5a21ad15764c696\",\n      \"agent\": \"worker-0\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_cda9010d25a4424cb5a21ad15764c696\",\n      \"agent\": \"worker-0\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:37+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_cda9010d25a4424cb5a21ad15764c696",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:37+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 4,
+      "same_file": true,
+      "repeat": 1,
+      "seconds": 0.28410326200537384,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_eefca433591e4f97a0875be4afaf9d5c\",\n      \"agent\": \"worker-1\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_eefca433591e4f97a0875be4afaf9d5c\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:38+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_eefca433591e4f97a0875be4afaf9d5c\",\n      \"agent\": \"worker-1\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_eefca433591e4f97a0875be4afaf9d5c\",\n      \"agent\": \"worker-1\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:38+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_eefca433591e4f97a0875be4afaf9d5c",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:38+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 4,
+      "same_file": true,
+      "repeat": 2,
+      "seconds": 0.2834175649913959,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_167d54b7dcab4a0798d10a552922a20b\",\n      \"agent\": \"worker-1\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_167d54b7dcab4a0798d10a552922a20b\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:38+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_167d54b7dcab4a0798d10a552922a20b\",\n      \"agent\": \"worker-1\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_167d54b7dcab4a0798d10a552922a20b\",\n      \"agent\": \"worker-1\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:38+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_167d54b7dcab4a0798d10a552922a20b",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:38+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 8,
+      "same_file": false,
+      "repeat": 0,
+      "seconds": 0.5326392179704271,
+      "successful": 8,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_adedbf0390e348648d5daf529c65ecfe\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_8250b375b9ef40b785881a412f28c4f5\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_783ad2de173d4c1c9c5d3bf2e565ea20\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_6cd3e5d76a494d1eb13a31bf0f41e51f\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_fc3e8d4d33ff419ebdb385ef6556361c\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-4\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_f5502d2fedf94feb915956e41046dcc6\",\n    \"agent\": \"worker-5\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-5\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_206c63c6b47a47a0bc1610b012f424a4\",\n    \"agent\": \"worker-6\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-6\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_b14c0279e05544a387a422a4b378cfe3\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-7\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:38+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_b14c0279e05544a387a422a4b378cfe3",
+            "agent": "worker-7",
+            "task": "race",
+            "files": [
+              "file-7"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_fc3e8d4d33ff419ebdb385ef6556361c",
+            "agent": "worker-4",
+            "task": "race",
+            "files": [
+              "file-4"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_783ad2de173d4c1c9c5d3bf2e565ea20",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_adedbf0390e348648d5daf529c65ecfe",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_f5502d2fedf94feb915956e41046dcc6",
+            "agent": "worker-5",
+            "task": "race",
+            "files": [
+              "file-5"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_8250b375b9ef40b785881a412f28c4f5",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_206c63c6b47a47a0bc1610b012f424a4",
+            "agent": "worker-6",
+            "task": "race",
+            "files": [
+              "file-6"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_6cd3e5d76a494d1eb13a31bf0f41e51f",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 8,
+      "same_file": false,
+      "repeat": 1,
+      "seconds": 0.5282523580244742,
+      "successful": 8,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_3731fd76c5444af1acdabede4283d88f\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_e26b277ac555462898c461c8a8857db6\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_8c53a95859444618914d17da2ec1054c\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_1440e3d87c2c4f8d996121c1897e7e0d\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_4b248e6abbbf46c582a3ab9eef82f544\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-4\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_f5ac1573a4634677a1b33a570d7aa6c6\",\n    \"agent\": \"worker-5\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-5\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_ee683a7ae24348a3ba2edf2c703d99dd\",\n    \"agent\": \"worker-6\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-6\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_b324e5e14fe449a3bb70f91b41b1a4ec\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-7\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:39+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:39+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_1440e3d87c2c4f8d996121c1897e7e0d",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_8c53a95859444618914d17da2ec1054c",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_e26b277ac555462898c461c8a8857db6",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_ee683a7ae24348a3ba2edf2c703d99dd",
+            "agent": "worker-6",
+            "task": "race",
+            "files": [
+              "file-6"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_4b248e6abbbf46c582a3ab9eef82f544",
+            "agent": "worker-4",
+            "task": "race",
+            "files": [
+              "file-4"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_f5ac1573a4634677a1b33a570d7aa6c6",
+            "agent": "worker-5",
+            "task": "race",
+            "files": [
+              "file-5"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_b324e5e14fe449a3bb70f91b41b1a4ec",
+            "agent": "worker-7",
+            "task": "race",
+            "files": [
+              "file-7"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:39+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_3731fd76c5444af1acdabede4283d88f",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 8,
+      "same_file": false,
+      "repeat": 2,
+      "seconds": 0.519880210980773,
+      "successful": 8,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_e0085caeaf8549609351561026f00108\",\n    \"agent\": \"worker-0\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-0\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_aa834003b8494a3db87ecae30bf9edaa\",\n    \"agent\": \"worker-1\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-1\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_22429838eee2462f83e7d1c38a146e42\",\n    \"agent\": \"worker-2\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-2\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_18643a7450554c65a381c06c73676065\",\n    \"agent\": \"worker-3\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-3\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_34ad4f01b9214375b4260a3c821f230b\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-4\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_c67693240ad94d1dac29f60aa5d2d681\",\n    \"agent\": \"worker-5\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-5\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_c1c59f62fc964196845cb6266259f786\",\n    \"agent\": \"worker-6\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-6\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_97e7511a6c6f478a9bb59077299ce55f\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"file-7\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:40+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_18643a7450554c65a381c06c73676065",
+            "agent": "worker-3",
+            "task": "race",
+            "files": [
+              "file-3"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_c1c59f62fc964196845cb6266259f786",
+            "agent": "worker-6",
+            "task": "race",
+            "files": [
+              "file-6"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_34ad4f01b9214375b4260a3c821f230b",
+            "agent": "worker-4",
+            "task": "race",
+            "files": [
+              "file-4"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_aa834003b8494a3db87ecae30bf9edaa",
+            "agent": "worker-1",
+            "task": "race",
+            "files": [
+              "file-1"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_e0085caeaf8549609351561026f00108",
+            "agent": "worker-0",
+            "task": "race",
+            "files": [
+              "file-0"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_97e7511a6c6f478a9bb59077299ce55f",
+            "agent": "worker-7",
+            "task": "race",
+            "files": [
+              "file-7"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_22429838eee2462f83e7d1c38a146e42",
+            "agent": "worker-2",
+            "task": "race",
+            "files": [
+              "file-2"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_c67693240ad94d1dac29f60aa5d2d681",
+            "agent": "worker-5",
+            "task": "race",
+            "files": [
+              "file-5"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 8,
+      "same_file": true,
+      "repeat": 0,
+      "seconds": 0.4823827279615216,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n    \"agent\": \"worker-5\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:40+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c309fb0889f74772b19fd6db06d1d85d\",\n      \"agent\": \"worker-5\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:40+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_c309fb0889f74772b19fd6db06d1d85d",
+            "agent": "worker-5",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:40+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 8,
+      "same_file": true,
+      "repeat": 1,
+      "seconds": 0.4864324569934979,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n      \"agent\": \"worker-7\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_c986b0f1788e4281b52f6c5344715e2c\",\n    \"agent\": \"worker-7\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:41+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:41+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_c986b0f1788e4281b52f6c5344715e2c",
+            "agent": "worker-7",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:41+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "processes": 8,
+      "same_file": true,
+      "repeat": 2,
+      "seconds": 0.4750752280233428,
+      "successful": 1,
+      "double_claims": 0,
+      "lost_acknowledged_events": 0,
+      "unexpected_errors": 0,
+      "raw": [
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n    \"agent\": \"worker-4\",\n    \"task\": \"race\",\n    \"files\": [\n      \"shared\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:42+00:00\",\n    \"released_at\": null\n  }\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        },
+        {
+          "exit_code": 2,
+          "stdout": "{\n  \"status\": \"blocked\",\n  \"conflicts\": [\n    {\n      \"claim_id\": \"clm_a62ab395ce1e4759955b98f3def3c3cb\",\n      \"agent\": \"worker-4\",\n      \"files\": [\n        \"shared\"\n      ]\n    }\n  ]\n}\n",
+          "stderr": ""
+        }
+      ],
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:41+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_a62ab395ce1e4759955b98f3def3c3cb",
+            "agent": "worker-4",
+            "task": "race",
+            "files": [
+              "shared"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      }
+    }
+  ],
+  "interruptions": [
+    {
+      "version": "baseline",
+      "phase": "before",
+      "victim_exit": -9,
+      "stdout": "",
+      "stderr": "",
+      "ledger_before_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:32+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5832211380",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "ledger_after_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:32+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5832211380",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_5832350482",
+            "agent": "recovery",
+            "task": "recovery",
+            "files": [
+              "c"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "recovery": {
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5832350482\",\n    \"agent\": \"recovery\",\n    \"task\": \"recovery\",\n    \"files\": [\n      \"c\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:32+00:00\",\n    \"released_at\": null\n  }\n}\n",
+        "stderr": ""
+      },
+      "prior_acknowledged_survives": true,
+      "unacknowledged_commit_present": false
+    },
+    {
+      "version": "baseline",
+      "phase": "after",
+      "victim_exit": -9,
+      "stdout": "",
+      "stderr": "",
+      "ledger_before_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:32+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5832489501",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_5832543575",
+            "agent": "victim",
+            "task": "interrupt",
+            "files": [
+              "b"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "ledger_after_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:32+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5832489501",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_5832543575",
+            "agent": "victim",
+            "task": "interrupt",
+            "files": [
+              "b"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_5832598078",
+            "agent": "recovery",
+            "task": "recovery",
+            "files": [
+              "c"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "recovery": {
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5832598078\",\n    \"agent\": \"recovery\",\n    \"task\": \"recovery\",\n    \"files\": [\n      \"c\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:32+00:00\",\n    \"released_at\": null\n  }\n}\n",
+        "stderr": ""
+      },
+      "prior_acknowledged_survives": true,
+      "unacknowledged_commit_present": true
+    },
+    {
+      "version": "improved",
+      "phase": "before",
+      "victim_exit": -9,
+      "stdout": "",
+      "stderr": "",
+      "ledger_before_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:42+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_4271474e005b45a892bfd4e7a57bc99a",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "ledger_after_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:42+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_4271474e005b45a892bfd4e7a57bc99a",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_42f96d8b72fe41da90204b350f5d636a",
+            "agent": "recovery",
+            "task": "recovery",
+            "files": [
+              "c"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "recovery": {
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_42f96d8b72fe41da90204b350f5d636a\",\n    \"agent\": \"recovery\",\n    \"task\": \"recovery\",\n    \"files\": [\n      \"c\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:42+00:00\",\n    \"released_at\": null\n  }\n}\n",
+        "stderr": ""
+      },
+      "prior_acknowledged_survives": true,
+      "unacknowledged_commit_present": false
+    },
+    {
+      "version": "improved",
+      "phase": "after",
+      "victim_exit": -9,
+      "stdout": "",
+      "stderr": "",
+      "ledger_before_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:42+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_98e030e2341c4467b113c303ba78c332",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_aa194649f6b7464bbbc5926fc5e15940",
+            "agent": "victim",
+            "task": "interrupt",
+            "files": [
+              "b"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "ledger_after_recovery": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:42+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_98e030e2341c4467b113c303ba78c332",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_aa194649f6b7464bbbc5926fc5e15940",
+            "agent": "victim",
+            "task": "interrupt",
+            "files": [
+              "b"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_5b1181f97b2c4ea8b464febc48985b48",
+            "agent": "recovery",
+            "task": "recovery",
+            "files": [
+              "c"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:42+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [],
+        "handoffs": []
+      },
+      "recovery": {
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"claimed\",\n  \"claim\": {\n    \"id\": \"clm_5b1181f97b2c4ea8b464febc48985b48\",\n    \"agent\": \"recovery\",\n    \"task\": \"recovery\",\n    \"files\": [\n      \"c\"\n    ],\n    \"status\": \"active\",\n    \"created_at\": \"2026-10-22T09:58:42+00:00\",\n    \"released_at\": null\n  }\n}\n",
+        "stderr": ""
+      },
+      "prior_acknowledged_survives": true,
+      "unacknowledged_commit_present": true
+    }
+  ],
+  "long_verify": [
+    {
+      "version": "baseline",
+      "lost_acknowledged_events": 1,
+      "exit_code": 0,
+      "stdout": "{\n  \"id\": \"vrf_5832866723\",\n  \"agent\": \"a\",\n  \"command\": \"/usr/bin/python3 -c 'import pathlib,time; pathlib.Path('\\\"'\\\"'/tmp/evidence-relay-experiment-j84w7zhf/baseline/started'\\\"'\\\"').touch();\\nwhile not pathlib.Path('\\\"'\\\"'/tmp/evidence-relay-experiment-j84w7zhf/baseline/continue'\\\"'\\\"').exists(): time.sleep(.01)\\nprint(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"output\": \"ACCEPTED\",\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:32+00:00\"\n}\n",
+      "stderr": "",
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:32+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_5832709915",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:32+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [
+          {
+            "id": "vrf_5832866723",
+            "agent": "a",
+            "command": "/usr/bin/python3 -c 'import pathlib,time; pathlib.Path('\"'\"'/tmp/evidence-relay-experiment-j84w7zhf/baseline/started'\"'\"').touch();\nwhile not pathlib.Path('\"'\"'/tmp/evidence-relay-experiment-j84w7zhf/baseline/continue'\"'\"').exists(): time.sleep(.01)\nprint(\"ACCEPTED\")'",
+            "exit_code": 0,
+            "status": "passed",
+            "output": "ACCEPTED",
+            "git_ref": null,
+            "created_at": "2026-10-22T09:58:32+00:00"
+          }
+        ],
+        "handoffs": []
+      }
+    },
+    {
+      "version": "improved",
+      "lost_acknowledged_events": 0,
+      "exit_code": 0,
+      "stdout": "{\n  \"id\": \"vrf_a6572dd48042486088b2c450471204ad\",\n  \"agent\": \"a\",\n  \"claim_id\": \"clm_d8a03e04203d466a8a0660bebc676d1f\",\n  \"task\": \"task-a\",\n  \"files\": [\n    \"a\"\n  ],\n  \"command\": \"/usr/bin/python3 -c 'import pathlib,time; pathlib.Path('\\\"'\\\"'/tmp/evidence-relay-experiment-j84w7zhf/improved/started'\\\"'\\\"').touch();\\nwhile not pathlib.Path('\\\"'\\\"'/tmp/evidence-relay-experiment-j84w7zhf/improved/continue'\\\"'\\\"').exists(): time.sleep(.01)\\nprint(\\\"ACCEPTED\\\")'\",\n  \"exit_code\": 0,\n  \"status\": \"passed\",\n  \"require_output\": \"ACCEPTED\",\n  \"output\": \"ACCEPTED\\n\",\n  \"output_truncated\": false,\n  \"timed_out\": false,\n  \"snapshot_before\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"snapshot_after\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"stable\": true,\n  \"git_ref\": null,\n  \"created_at\": \"2026-10-22T09:58:43+00:00\"\n}\n",
+      "stderr": "",
+      "ledger": {
+        "schema_version": 1,
+        "project": {
+          "name": "Untitled project",
+          "created_at": "2026-10-22T09:58:42+00:00"
+        },
+        "claims": [
+          {
+            "id": "clm_d8a03e04203d466a8a0660bebc676d1f",
+            "agent": "a",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:43+00:00",
+            "released_at": null
+          },
+          {
+            "id": "clm_107f16b5dd8a46e0aaa66d9e7ae74a4b",
+            "agent": "b",
+            "task": "concurrent",
+            "files": [
+              "b"
+            ],
+            "status": "active",
+            "created_at": "2026-10-22T09:58:43+00:00",
+            "released_at": null
+          }
+        ],
+        "verifications": [
+          {
+            "id": "vrf_a6572dd48042486088b2c450471204ad",
+            "agent": "a",
+            "claim_id": "clm_d8a03e04203d466a8a0660bebc676d1f",
+            "task": "task-a",
+            "files": [
+              "a"
+            ],
+            "command": "/usr/bin/python3 -c 'import pathlib,time; pathlib.Path('\"'\"'/tmp/evidence-relay-experiment-j84w7zhf/improved/started'\"'\"').touch();\nwhile not pathlib.Path('\"'\"'/tmp/evidence-relay-experiment-j84w7zhf/improved/continue'\"'\"').exists(): time.sleep(.01)\nprint(\"ACCEPTED\")'",
+            "exit_code": 0,
+            "status": "passed",
+            "require_output": "ACCEPTED",
+            "output": "ACCEPTED\n",
+            "output_truncated": false,
+            "timed_out": false,
+            "snapshot_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "snapshot_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stable": true,
+            "git_ref": null,
+            "created_at": "2026-10-22T09:58:43+00:00"
+          }
+        ],
+        "handoffs": []
+      }
+    }
+  ]
+}

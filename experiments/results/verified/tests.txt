@@ -1,0 +1,16 @@
+test_dotenv_is_preserved (test_regressions.RegressionTests.test_dotenv_is_preserved) ... ok
+test_snapshot_includes_untracked (test_regressions.RegressionTests.test_snapshot_includes_untracked) ... ok
+test_snapshot_tracks_modes_deletion_and_symlink_without_following (test_regressions.RegressionTests.test_snapshot_tracks_modes_deletion_and_symlink_without_following) ... ok
+test_stale_evidence_and_command_only (test_regressions.RegressionTests.test_stale_evidence_and_command_only) ... ok
+test_claim_conflict_verify_and_handoff (test_relay.EvidenceRelayTests.test_claim_conflict_verify_and_handoff) ... ok
+test_change_during_verify_is_invalid (test_safety.SafetyTests.test_change_during_verify_is_invalid) ... ok
+test_command_exit_does_not_prove_requirement (test_safety.SafetyTests.test_command_exit_does_not_prove_requirement) ... ok
+test_long_verify_does_not_overwrite_new_claim (test_safety.SafetyTests.test_long_verify_does_not_overwrite_new_claim) ... ok
+test_parallel_claims_no_loss_or_double_owner (test_safety.SafetyTests.test_parallel_claims_no_loss_or_double_owner) ... ok
+test_scope_ownership_and_directory_conflict (test_safety.SafetyTests.test_scope_ownership_and_directory_conflict) ... ok
+test_timeout_and_output_bound (test_safety.SafetyTests.test_timeout_and_output_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 3.334s
+
+OK
